@@ -32,8 +32,31 @@ body {
 }
 
 h1, h2 {
-    font-family: $font-arial;
-    color: $green;
+    margin: 0;
+    font-family: $font-exo;
+    font-weight: 900;
+    color: $white;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 48px;
+
+    .large {
+        display: block;
+        font-size: 68px;
+    }
+
+    .medium {
+        display: block;
+        font-size: 63px;
+    }
+
+    .small {
+        display: block;
+        font-size: 32px;
+    }
+
 }
 
 a {
@@ -47,6 +70,14 @@ a {
 
 ul {
     background-color: transparent;
+}
+
+.fade-off {
+    opacity: 0!important;
+}
+
+.fade-on {
+    opacity: 1!important;
 }
 
 #main-navigation {
@@ -69,7 +100,11 @@ ul {
             font-size: 18px;
             color: $white;
             text-transform: uppercase;
-            text-shadow: 2px 2px 1px rgba(100, 100, 100, 1);
+            text-shadow: 1px 1px 3px rgba(23, 23, 23, 0.89);
+
+            &:hover {
+                color: $blue;
+            }
         }
     }
 }
@@ -80,8 +115,97 @@ ul {
     height: 100vh;
     background: url(../images/fpo-hero-bg.jpg) no-repeat;
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     z-index: 50;
+
+    h2 {
+        position: relative;
+        top: 50%;
+        line-height: 70px;
+        text-align: center;
+        text-shadow: 1px 1px 3px rgba(23, 23, 23, 0.89);
+        transform: translateY(-50%);
+        transition: opacity 1s ease-out;
+
+        .large {
+            opacity: 0;
+            transform: rotateZ(-12deg);
+            transform-origin: left;
+            animation-name: LargeIn;
+            animation-duration: 1.5s;
+            animation-play-state: running;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        .medium {
+            opacity: 0;
+            transform: rotateZ(12deg);
+            transform-origin: right;
+            animation-name: MediumIn;
+            animation-delay: .5s;
+            animation-duration: 1.5s;
+            animation-play-state: running;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+
+        .small {
+            opacity: 0;
+            transform: translateY(50px);
+            animation-name: SmallIn;
+            animation-delay: 1s;
+            animation-duration: 1s;
+            animation-play-state: running;
+            animation-timing-function: ease-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+@keyframes LargeIn {
+
+    0% {
+        opacity: 0;
+        transform: rotateZ(-12deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateZ(0deg);
+    }
+
+}
+
+@keyframes MediumIn {
+
+    0% {
+        opacity: 0;
+        transform: rotateZ(12deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateZ(0deg);
+    }
+
+}
+
+@keyframes SmallIn {
+
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 
 }
 
@@ -98,7 +222,6 @@ ul {
     animation-name: LightsUp;
     animation-play-state: running;
     //animation-play-state: paused;
-    animation-delay: .5s;
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -127,6 +250,8 @@ ul {
     background: url(../images/logo-w-shadow.png) no-repeat;
     background-size: 100%;
     z-index: 15;
+    transition: opacity 1s ease-out;
+    transition-delay: .3s;
 }
 
 #about-the-device {
