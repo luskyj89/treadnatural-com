@@ -1,0 +1,136 @@
+/* @author: John Lusky
+   Date: 1/16/16
+ */
+
+/// Imports
+@import "_normalize";
+@import "_boilerplate";
+@import "_mixins";
+@import "_typography";
+
+/// Colors
+$white: #ffffff;
+$black: #000000;
+$green: #08e35a;
+$blue: #09c9f2;
+$tan: #ecc49a;
+$light-gray: #E4E4E4;
+$dark-gray: #323232;
+$darkest-gray: #151515;
+
+/// Global Vars
+$width: 1280px;
+
+/// Global Styles
+body {
+    -webkit-font-smoothing: antialiased;
+    background: $white;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    width: 100%;
+    color: $white;
+}
+
+h1, h2 {
+    font-family: $font-arial;
+    color: $green;
+}
+
+a {
+    color: $blue;
+    text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+ul {
+    background-color: transparent;
+}
+
+#main-navigation {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+
+    ul {
+        margin: 25px auto;
+        text-align: center;
+    }
+
+    li {
+        display: inline-block;
+        margin: 0 15px;
+
+        a {
+            font-family: $font-exo;
+            font-weight: 900;
+            font-size: 18px;
+            color: $white;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 1px rgba(100, 100, 100, 1);
+        }
+    }
+}
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/fpo-hero-bg.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: 50;
+
+}
+
+#hero-lights-out {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $black;
+    opacity: .9;
+    //opacity: .1;
+    z-index: 10;
+    animation-name: LightsUp;
+    animation-play-state: running;
+    //animation-play-state: paused;
+    animation-delay: .5s;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes LightsUp {
+
+    0% {
+        opacity: .9;
+    }
+
+    100% {
+        opacity: .1;
+    }
+
+}
+
+.logo-w-shadow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 210px;
+    height: 150px;
+    margin-left: -105px;
+    background: url(../images/logo-w-shadow.png) no-repeat;
+    background-size: 100%;
+    z-index: 15;
+}
+
+#about-the-device {
+    width: 100%;
+    min-height: 400px;
+    background-color: $blue;
+}
