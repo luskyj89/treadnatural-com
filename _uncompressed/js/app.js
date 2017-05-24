@@ -5,16 +5,13 @@ var frameHeight 	= $(window).height();
 var frameWidth 		= $(window).width();
 var logo			= $(".logo-w-shadow");
 var bigCta			= $("#big-cta");
+var nav 			= $("#main-navigation");
+var hLogo 			= $(".horizontal-logo");
 
 // Resizer
 function resizer(e) {
 	var frameHeight = $(window).height();
 	var frameWidth = $(window).width();
-
-	//$("#top").css('height', frameHeight);
-	//$(".space").css('height', frameHeight);
-    //$(".carbon").css('height', frameHeight);
-
 }
 
 // Video BG and HUD Control
@@ -35,50 +32,19 @@ function videoStarter() {
 
 }
 
-/* ----------------------------------------
-   Init
---------------------------------------- */
+function scrollCheck() {
 
-function init() {
-
-    resizer();
-
-	videoStarter();
-
-}
-
-$(document).ready(function(){
-
-    init();
-
-    // Smooth scroll to anchors
-	$('.smooth').click(function() {
-	  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname) {
-
-	    var target = $(this.hash);
-	    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	    if (target.length) {
-	      $('html,body').animate({
-	        scrollTop: target.offset().top
-	      }, 1000, "easeOutQuad");
-	      return false;
-	    }
-	  }
-	});
-
-});
-
-$( window ).resize(function() {
-	resizer();
-});
-
-
-$(window).scroll( function() {
-
-	if ($(window).scrollTop() > frameHeight - 10) {
+	if ($(window).scrollTop() > frameHeight - 100) {
 		// Fires when scrolling down past initial frame height
+		nav.addClass("below-hero");
+		hLogo.addClass("reveal-logo");
 	}
-	else if ( $(window).scrollTop() < 100 ) {
+	else if ($(window).scrollTop() < frameHeight - 100) {
+		nav.removeClass("below-hero");
+		hLogo.removeClass("reveal-logo");
+	}
+
+	if ( $(window).scrollTop() < 100 ) {
 		logo.removeClass("fade-off");
 		logo.addClass("fade-on");
 
@@ -92,5 +58,70 @@ $(window).scroll( function() {
 		bigCta.removeClass("fade-on");
 		bigCta.addClass("fade-off");
 	}
+}
+
+/* ----------------------------------------
+   Init
+--------------------------------------- */
+
+function init() {
+
+    resizer();
+	videoStarter();
+	scrollCheck();
+
+}
+
+$(document).ready(function(){
+
+    init();
+
+	// Select all links with hashes
+	$('a[href*="#"]')
+	  // Remove links that don't actually link to anything
+	  .not('[href="#"]')
+	  .not('[href="#0"]')
+	  .click(function(event) {
+	    // On-page links
+	    if (
+	      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+	      &&
+	      location.hostname == this.hostname
+	    ) {
+	      // Figure out element to scroll to
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+	      // Does a scroll target exist?
+	      if (target.length) {
+	        // Only prevent default if animation is actually gonna happen
+	        event.preventDefault();
+	        $('html, body').animate({
+	          scrollTop: target.offset().top - 87
+	        }, 1000, function() {
+	          // Callback after animation
+	          // Must change focus!
+	          var $target = $(target);
+	          $target.focus();
+	          if ($target.is(":focus")) { // Checking if the target was focused
+	            return false;
+	          } else {
+	            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+	            $target.focus(); // Set focus again
+	          };
+	        });
+	      }
+	    }
+	  });
+
+});
+
+$( window ).resize(function() {
+	resizer();
+});
+
+
+$(window).scroll( function() {
+
+	scrollCheck();
 
 });

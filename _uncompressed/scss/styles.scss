@@ -16,6 +16,7 @@ $blue: #09c9f2;
 $tan: #ecc49a;
 $light-gray: #E4E4E4;
 $dark-gray: #323232;
+$darkest-gray: #171717;
 $darkest-gray: #151515;
 
 /// Global Vars
@@ -25,10 +26,15 @@ $width: 1280px;
 body {
     -webkit-font-smoothing: antialiased;
     background: $white;
-    background-attachment: fixed;
     overflow-x: hidden;
     width: 100%;
+    font-family: $font-roboto;
     color: $white;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
 }
 
 h1, h2 {
@@ -57,6 +63,39 @@ h2 {
         font-size: 32px;
     }
 
+    @media all and (max-width: 768px) {
+
+        .large, .medium {
+            font-size: 30px;
+            line-height: 35px;
+        }
+
+        .small {
+            font-size: 18px;
+            line-height: 35px;
+        }
+
+    }
+
+}
+
+h3 {
+    margin: 30px 0 0;
+    font-family: $font-exo;
+    font-size: 48px;
+    font-weight: 900;
+    color: $white;
+    text-transform: uppercase;
+
+    @media all and (max-width: 768px) {
+        font-size: 30px;
+    }
+}
+
+p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 27px;
 }
 
 a {
@@ -72,6 +111,51 @@ ul {
     background-color: transparent;
 }
 
+.wrap {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 30px 20px 60px;
+
+    img {
+        width: 100%;
+        height: auto;
+
+        &.single {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    &.left {
+        width: 55%;
+    }
+
+    &.right {
+        width: 45%;
+    }
+
+    @media all and (max-width: 768px) {
+        padding: 30px 30px;
+
+        &.left {
+            width: 100%;
+        }
+
+        &.right {
+            width: 100%;
+        }
+    }
+}
+
+
+
 .fade-off {
     opacity: 0!important;
 }
@@ -80,10 +164,13 @@ ul {
     opacity: 1!important;
 }
 
+/// Navigation
+
 #main-navigation {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    transition: all .5s ease-out;
 
     ul {
         margin: 25px auto;
@@ -91,6 +178,8 @@ ul {
     }
 
     li {
+        position: relative;
+        top: -6px;
         display: inline-block;
         margin: 0 15px;
 
@@ -106,8 +195,35 @@ ul {
                 color: $blue;
             }
         }
+
+        &:first-child {
+            margin: 0;
+        }
+    }
+
+    &.below-hero {
+        background-color: $darkest-gray;
     }
 }
+
+.horizontal-logo {
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    width: 0px;
+    height: 30px;
+    margin: 0;
+    background: url(../images/logo-horizontal.png) no-repeat;
+    background-size: 100%;
+    transition: all .5s ease-out;
+
+    &.reveal-logo {
+        width: 200px;
+        margin: 0 15px 0 0;
+    }
+}
+
+/// Hero
 
 #hero {
     position: relative;
@@ -222,20 +338,29 @@ ul {
 
 .logo-w-shadow {
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
     left: 50%;
-    width: 210px;
-    height: 150px;
-    margin-left: -105px;
-    background: url(../images/logo-w-shadow.png) no-repeat;
+    width: 320px;
+    height: 135px;
+    margin-left: -160px;
+    background: url(../images/logo-horizontal.png) no-repeat;
     background-size: 100%;
     z-index: 15;
     transition: opacity 1s ease-out;
     transition-delay: .3s;
 }
 
+/// About
+
 #about-the-device {
     width: 100%;
     min-height: 400px;
     background-color: $blue;
+}
+
+/// Gallery
+
+#gallery {
+    min-height: 400px;
+    background-color: $dark-gray;
 }
