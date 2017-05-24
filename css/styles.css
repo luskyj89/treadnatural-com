@@ -156,8 +156,7 @@ dfn {
  * Known issue: no IE 6/7 normalization.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0; }
 
 /**
@@ -391,8 +390,7 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -409,7 +407,6 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box; }
 
@@ -622,126 +619,63 @@ ul {
     line-height: 70px;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(23, 23, 23, 0.89);
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    -webkit-transition: opacity 1s ease-out;
+    transform: translateY(-50%);
     transition: opacity 1s ease-out; }
     #hero h2 .large {
       opacity: 0;
-      -webkit-transform: rotateZ(-12deg);
-              transform: rotateZ(-12deg);
-      -webkit-transform-origin: left;
-              transform-origin: left;
-      -webkit-animation-name: LargeIn;
-              animation-name: LargeIn;
-      -webkit-animation-duration: 1.5s;
-              animation-duration: 1.5s;
-      -webkit-animation-play-state: running;
-              animation-play-state: running;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-      -webkit-animation-iteration-count: 1;
-              animation-iteration-count: 1;
-      -webkit-animation-fill-mode: forwards;
-              animation-fill-mode: forwards; }
+      transform: rotateZ(-12deg);
+      transform-origin: left;
+      animation-name: LargeIn;
+      animation-duration: 1.5s;
+      animation-play-state: running;
+      animation-timing-function: ease-out;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards; }
     #hero h2 .medium {
       opacity: 0;
-      -webkit-transform: rotateZ(12deg);
-              transform: rotateZ(12deg);
-      -webkit-transform-origin: right;
-              transform-origin: right;
-      -webkit-animation-name: MediumIn;
-              animation-name: MediumIn;
-      -webkit-animation-delay: .5s;
-              animation-delay: .5s;
-      -webkit-animation-duration: 1.5s;
-              animation-duration: 1.5s;
-      -webkit-animation-play-state: running;
-              animation-play-state: running;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-      -webkit-animation-iteration-count: 1;
-              animation-iteration-count: 1;
-      -webkit-animation-fill-mode: forwards;
-              animation-fill-mode: forwards; }
+      transform: rotateZ(12deg);
+      transform-origin: right;
+      animation-name: MediumIn;
+      animation-delay: .5s;
+      animation-duration: 1.5s;
+      animation-play-state: running;
+      animation-timing-function: ease-out;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards; }
     #hero h2 .small {
       opacity: 0;
-      -webkit-transform: translateY(50px);
-              transform: translateY(50px);
-      -webkit-animation-name: SmallIn;
-              animation-name: SmallIn;
-      -webkit-animation-delay: 1s;
-              animation-delay: 1s;
-      -webkit-animation-duration: 1s;
-              animation-duration: 1s;
-      -webkit-animation-play-state: running;
-              animation-play-state: running;
-      -webkit-animation-timing-function: ease-out;
-              animation-timing-function: ease-out;
-      -webkit-animation-iteration-count: 1;
-              animation-iteration-count: 1;
-      -webkit-animation-fill-mode: forwards;
-              animation-fill-mode: forwards; }
-
-@-webkit-keyframes LargeIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: rotateZ(-12deg);
-            transform: rotateZ(-12deg); }
-  100% {
-    opacity: 1;
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg); } }
+      transform: translateY(50px);
+      animation-name: SmallIn;
+      animation-delay: 1s;
+      animation-duration: 1s;
+      animation-play-state: running;
+      animation-timing-function: ease-out;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards; }
 
 @keyframes LargeIn {
   0% {
     opacity: 0;
-    -webkit-transform: rotateZ(-12deg);
-            transform: rotateZ(-12deg); }
+    transform: rotateZ(-12deg); }
   100% {
     opacity: 1;
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg); } }
-
-@-webkit-keyframes MediumIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: rotateZ(12deg);
-            transform: rotateZ(12deg); }
-  100% {
-    opacity: 1;
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg); } }
+    transform: rotateZ(0deg); } }
 
 @keyframes MediumIn {
   0% {
     opacity: 0;
-    -webkit-transform: rotateZ(12deg);
-            transform: rotateZ(12deg); }
+    transform: rotateZ(12deg); }
   100% {
     opacity: 1;
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg); } }
-
-@-webkit-keyframes SmallIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px); }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px); } }
+    transform: rotateZ(0deg); } }
 
 @keyframes SmallIn {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px); }
+    transform: translateY(50px); }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px); } }
+    transform: translateY(0px); } }
 
 #hero-lights-out {
   position: absolute;
@@ -752,24 +686,12 @@ ul {
   background-color: #000000;
   opacity: .9;
   z-index: 10;
-  -webkit-animation-name: LightsUp;
-          animation-name: LightsUp;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out; }
-
-@-webkit-keyframes LightsUp {
-  0% {
-    opacity: .9; }
-  100% {
-    opacity: .1; } }
+  animation-name: LightsUp;
+  animation-play-state: running;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out; }
 
 @keyframes LightsUp {
   0% {
@@ -787,10 +709,8 @@ ul {
   background: url(../images/logo-w-shadow.png) no-repeat;
   background-size: 100%;
   z-index: 15;
-  -webkit-transition: opacity 1s ease-out;
   transition: opacity 1s ease-out;
-  -webkit-transition-delay: .3s;
-          transition-delay: .3s; }
+  transition-delay: .3s; }
 
 #about-the-device {
   width: 100%;
