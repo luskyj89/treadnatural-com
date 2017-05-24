@@ -17,6 +17,24 @@ function resizer(e) {
 
 }
 
+// Video BG and HUD Control
+function videoStarter() {
+
+	$('#hero').vide({
+		mp4:'videos/headerloop4.mp4',
+		ogv:'videos/headerloop4.ogv',
+		webm:'videos/headerloop4.webm',
+		//poster:'images/tn-video-poster.jpg',
+		}, {
+		loop: true,
+		muted: true,
+		autoplay: true,
+		posterType: "jpg",
+		className: "tn-video"
+	});
+
+}
+
 /* ----------------------------------------
    Init
 --------------------------------------- */
@@ -24,6 +42,8 @@ function resizer(e) {
 function init() {
 
     resizer();
+
+	videoStarter();
 
 }
 
