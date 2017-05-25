@@ -20,8 +20,7 @@ function videoStarter() {
 	$('#hero').vide({
 		mp4:'videos/headerloop4.mp4',
 		ogv:'videos/headerloop4.ogv',
-		webm:'videos/headerloop4.webm',
-		//poster:'images/tn-video-poster.jpg',
+		webm:'videos/headerloop4.webm'
 		}, {
 		loop: true,
 		muted: true,
@@ -69,6 +68,32 @@ function init() {
     resizer();
 	videoStarter();
 	scrollCheck();
+
+	$('.media-slider').slick({
+		dots: true,
+		infinite: true,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+		{
+		  breakpoint: 768,
+		  settings: {
+		    slidesToShow: 1,
+		    slidesToScroll: 1
+		  }
+	  }]
+	});
+
+	$('#accordion').find('.accordion-toggle').click(function(){
+
+      //Expand or collapse this panel
+      $(this).next().slideToggle('fast');
+
+      //Hide the other panels
+      $(".accordion-content").not($(this).next()).slideUp('fast');
+
+    });
 
 }
 
