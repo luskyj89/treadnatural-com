@@ -98,6 +98,10 @@ p {
     margin: 10px 0;
     font-size: 18px;
     line-height: 27px;
+
+    &.smaller {
+        font-size: 12px;
+    }
 }
 
 a {
@@ -209,6 +213,73 @@ ul {
     &.below-hero {
         background-color: $darkest-gray;
     }
+
+    .desktop-nav {
+        display: block;
+
+        @media all and (max-width: 940px) {
+            display: none;
+        }
+    }
+
+    .mobile-nav {
+        display: none;
+        min-height: 50px;
+        margin: 0;
+        background-color: $darkest-gray;
+
+        ul {
+            display: none;
+            margin: 10px 0 0;
+            padding: 10px 0 20px 0;
+            text-align: center;
+        }
+
+        li {
+            position: relative;
+            top: 0;
+            display: block;
+            width: 100%;
+            margin: 0;
+            padding: 12px 20px;
+            background-color: $darkest-gray;
+
+            a {
+
+            }
+
+            &:first-child {
+                display: none;
+            }
+
+        }
+
+        .horizontal-logo {
+            top: 9px;
+            width: 200px;
+            margin-left: 15px;
+        }
+
+        #hamburger {
+            position: absolute;
+            top: 7px;
+            right: 15px;
+            font-size: 32px;
+            color: $white;
+
+            &.icon-cross {
+                top: 9px;
+            }
+
+            &:hover {
+                color: $blue;
+            }
+        }
+
+        @media all and (max-width: 940px) {
+            display: block;
+        }
+    }
 }
 
 .horizontal-logo {
@@ -227,6 +298,8 @@ ul {
         margin: 0 15px 0 0;
     }
 }
+
+
 
 /// Hero
 
@@ -411,7 +484,7 @@ ul {
 
     h3 {
         margin: 0 0 20px;
-        color: $darkest-gray;
+        color: $dark-gray;
         text-align: center;
     }
 
@@ -460,5 +533,53 @@ ul {
             width: 100%;
         }
 
+    }
+}
+
+/// Footer
+
+#footer {
+    padding: 40px 20px 100px;
+    background-color: $dark-gray;
+
+    h3 {
+        margin-top: 0;
+    }
+
+    .logo-footer {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    input, textarea {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+        padding: 0 20px;
+        background-color: $darkest-gray;
+        border: 0 solid;
+        border-top: 3px solid $white;
+        font-family: $font-roboto;
+        font-size: 18px;
+        line-height: 53px;
+        color: $white;
+        transition: all .7s ease-out;
+
+        &:focus {
+            border-color: $green;
+        }
+    }
+
+    #submit_btn {
+        padding: 10px 40px;
+        background-color: $blue;
+        border: 0 solid;
+        font-family: $font-exo;
+        color: $white;
+        font-size: 22px;
+
+        &:hover {
+            color: $darkest-gray;
+        }
     }
 }

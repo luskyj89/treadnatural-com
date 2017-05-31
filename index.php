@@ -19,14 +19,15 @@
     <body>
 
         <nav id="main-navigation">
-            <ul>
-                <li><a class="horizontal-logo" href="#hero" title="Home"></a></li>
-                <li><a href="#about-the-device" title="About The Device">About The Device</a></li>
-                <li><a href="#gallery" title="Gallery">Gallery</a></li>
-                <li><a href="#faqs" title="FAQs">FAQs</a></li>
-                <li><a href="#testimonials" title="Testimonials">Testimonials</a></li>
-                <li><a href="#contact-us" title="Contact Us">Contact Us</a></li>
-            </ul>
+            <div class="desktop-nav">
+                <?php require'inc/nav.php'; ?>
+            </div>
+
+            <div class="mobile-nav">
+                <a class="horizontal-logo" href="#hero" title="Home"></a>
+                <?php require'inc/nav.php'; ?>
+                <a id="hamburger" class="icon-menu" href="#" title="Open Menu"></a>
+            </div>
         </nav>
 
         <div id="main-contain">
@@ -167,9 +168,26 @@
             </section>
 
             <section id="footer">
-                <footer>
+                <div class="wrap flex-elements">
+                    <article class="content left">
+                        <img class='logo-footer' src="images/logo-horizontal.png" alt="Tread Natural Controls" />
+                        <footer>
+                            <p class="smaller">&copy; 2017 Tred Natural | All Rights Reserved | Patent Pending</p>
+                        </footer>
+                    </article>
 
-                </footer>
+                    <div class="content right">
+                        <h3>Contact Us</h3>
+
+                        <fieldset id="contact_form">
+        					<div id="result"></div>
+        					<input type="text" name="name" id="name" value="Full Name" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;"/>
+        					<input type="email" name="email" id="email" value="Email Address" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;" />
+        					<textarea name="message" id="message" placeholder="Enter your message..."></textarea>
+        					<button class="submit_btn" id="submit_btn">Send</button>
+        				</fieldset>
+                    </div>
+                </div>
             </section>
 
         </div>

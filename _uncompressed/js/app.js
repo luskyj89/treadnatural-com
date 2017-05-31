@@ -3,15 +3,32 @@
 --------------------------------------- */
 var frameHeight 	= $(window).height();
 var frameWidth 		= $(window).width();
+var mainNav			= $("#main-navigation");
 var logo			= $(".logo-w-shadow");
 var bigCta			= $("#big-cta");
 var nav 			= $("#main-navigation");
 var hLogo 			= $(".horizontal-logo");
+var hamburger		= $("#hamburger");
+var mobileNav		= $(".mobile-nav ul");
+
+// Set globablly accessible variables
+var scrollerOffset;
 
 // Resizer
 function resizer(e) {
 	var frameHeight = $(window).height();
 	var frameWidth = $(window).width();
+
+	// Keep the smooth scroll offset the correct height
+	if ( frameWidth >= 940 ) {
+
+		scrollerOffset = 87;
+
+	} else if ( frameWidth < 940 ) {
+
+		scrollerOffset = 50;
+
+	}
 }
 
 // Video BG and HUD Control
@@ -95,6 +112,28 @@ function init() {
 
     });
 
+	hamburger.click(function(e) {
+
+		e.preventDefault();
+
+		if ( hamburger.hasClass("icon-menu") ) {
+
+			hamburger.removeClass("icon-menu");
+			hamburger.addClass("icon-cross");
+
+			mobileNav.slideDown();
+
+		} else {
+
+			hamburger.removeClass("icon-cross");
+			hamburger.addClass("icon-menu");
+
+			mobileNav.slideUp();
+
+		}
+
+	});
+
 }
 
 $(document).ready(function(){
@@ -121,7 +160,7 @@ $(document).ready(function(){
 	        // Only prevent default if animation is actually gonna happen
 	        event.preventDefault();
 	        $('html, body').animate({
-	          scrollTop: target.offset().top - 87
+	          scrollTop: target.offset().top - scrollerOffset
 	        }, 1000, function() {
 	          // Callback after animation
 	          // Must change focus!
@@ -136,6 +175,10 @@ $(document).ready(function(){
 	        });
 	      }
 	    }
+		// For mobile
+		mobileNav.slideUp();
+		hamburger.removeClass("icon-cross");
+		hamburger.addClass("icon-menu");
 	  });
 
 });
