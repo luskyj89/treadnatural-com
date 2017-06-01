@@ -9,6 +9,7 @@
 @import "_typography";
 @import "_slick";
 @import "_slick-theme";
+@import "_lity";
 
 /// Colors
 $white: #ffffff;
@@ -570,7 +571,16 @@ ul {
         }
     }
 
+    input {
+
+        &:focus {
+            transform: rotateZ(-2deg);
+        }
+
+    }
+
     #submit_btn {
+        margin-top: 20px;
         padding: 10px 40px;
         background-color: $blue;
         border: 0 solid;

@@ -74,22 +74,22 @@
 
                     <div class="media-slider">
                         <div>
-                            <img src="images/photo-power-console.jpg" alt="Power Console Photo">
+                            <a href="images/photo-power-console.jpg" data-lity data-lity-desc=""><img src="images/photo-power-console.jpg" alt="Power Console Photo"></a>
                         </div>
                         <div>
-                            <img src="images/photo-power-console.jpg" alt="Power Console Photo">
+                            <a href="//www.youtube.com/watch?v=ilDTWGPAWDE" data-lity><img src="images/video-placeholder.jpg"></a>
                         </div>
                         <div>
-                            <img src="images/photo-power-console.jpg" alt="Power Console Photo">
+                            <a href="images/photo-power-console.jpg" data-lity data-lity-desc=""><img src="images/photo-power-console.jpg" alt="Power Console Photo"></a>
                         </div>
                         <div>
-                            <img src="images/photo-power-console.jpg" alt="Power Console Photo">
+                            <a href="images/photo-power-console.jpg" data-lity data-lity-desc=""><img src="images/photo-power-console.jpg" alt="Power Console Photo"></a>
                         </div>
                         <div>
-                            <img src="images/photo-power-console.jpg" alt="Power Console Photo">
+                            <a href="images/photo-power-console.jpg" data-lity data-lity-desc=""><img src="images/photo-power-console.jpg" alt="Power Console Photo"></a>
                         </div>
                         <div>
-                            <img src="images/photo-power-console.jpg" alt="Power Console Photo">
+                            <a href="images/photo-power-console.jpg" data-lity data-lity-desc=""><img src="images/photo-power-console.jpg" alt="Power Console Photo"></a>
                         </div>
                     </div>
 
@@ -197,6 +197,7 @@
 
         <script src="js/vendor/jquery.vide.min.js"></script>
         <script type="text/javascript" src="js/vendor/slick.min.js"></script>
+        <script type="text/javascript" src="js/vendor/lity.min.js"></script>
 
         <script src="js/plugins.js"></script>
         <script src="js/app.min.js"></script>
