@@ -10,6 +10,10 @@ var nav 			= $("#main-navigation");
 var hLogo 			= $(".horizontal-logo");
 var hamburger		= $("#hamburger");
 var mobileNav		= $(".mobile-nav ul");
+var startButton		= $("#start-button");
+var consoleIll		= $("#console-illustration");
+var tmNotTilting	= $(".treadmill-not-tilting");
+var tmTilting		= $(".treadmill-tilting");
 
 // Set globablly accessible variables
 var scrollerOffset;
@@ -112,6 +116,7 @@ function init() {
 
     });
 
+	// Mobile Nav
 	hamburger.click(function(e) {
 
 		e.preventDefault();
@@ -132,6 +137,25 @@ function init() {
 
 		}
 
+	});
+
+	// Animation init
+	startButton.click(function(e) {
+		e.preventDefault();
+
+		if ( consoleIll.hasClass("active")) {
+
+			consoleIll.removeClass("active");
+			tmTilting.fadeOut();
+			tmNotTilting.fadeIn();
+
+		} else {
+
+			consoleIll.addClass("active");
+			tmTilting.fadeIn();
+			tmNotTilting.fadeOut();
+
+		}
 	});
 
 }

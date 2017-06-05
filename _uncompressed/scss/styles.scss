@@ -103,6 +103,11 @@ p {
     &.smaller {
         font-size: 12px;
     }
+
+    @media all and (max-width: 768px) {
+        font-size: 16px;
+        line-height: 25px;
+    }
 }
 
 a {
@@ -152,7 +157,7 @@ ul {
     }
 
     @media all and (max-width: 768px) {
-        padding: 15px 30px;
+        padding: 15px 20px;
 
         &.left {
             width: 100%;
@@ -434,7 +439,199 @@ ul {
 #about-the-device {
     width: 100%;
     min-height: 400px;
+    padding: 60px 20px 80px;
     background-color: $blue;
+
+    h3 {
+        font-size: 40px;
+    }
+
+    .content {
+
+        &.left {
+            width: 45%;
+        }
+
+        &.right {
+            width: 55%;
+        }
+
+    }
+
+    @media all and (max-width: 768px) {
+        padding: 10px 0 40px;
+
+        h3 {
+            font-size: 30px;
+        }
+
+        .content {
+            padding: 15px 20px;
+
+            &.left {
+                width: 100%;
+            }
+
+            &.right {
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+    }
+}
+
+#console-illustration {
+    position: relative;
+    width: 455px;
+    height: 296px;
+    background: url(../images/console-stopped.png) no-repeat;
+    background-size: 100%;
+
+    .try-it {
+        position: absolute;
+        top: 170px;
+        right: 48px;
+        width: 80px;
+        height: 80px;
+        padding-top: 25px;
+        border-radius: 80px;
+        box-shadow: 3px 8px 6px #151515;
+        background-color: $green;
+        font-size: 20px;
+        font-family: $font-exo;
+        color: $white;
+        text-align: center;
+        z-index: 99;
+        animation-name: tryfloat;
+        animation-play-state: running;
+        animation-duration: 1.5s;
+        animation-fill-mode: both;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    #start-button {
+        position: absolute;
+        top: 57px;
+        right: 131px;
+        width: 60px;
+        height: 100px;
+        z-index: 100;
+    }
+
+    #console-started {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 455px;
+        height: 296px;
+        background: url(../images/console-started.png) no-repeat;
+        background-size: 100%;
+        opacity: 0;
+        z-index: 10;
+    }
+
+    &.active {
+
+        #console-started {
+            opacity: 1;
+        }
+
+    }
+
+    @media all and (max-width: 940px) {
+        width: 320px;
+        height: 208px;
+        margin: 140px auto 0;
+
+        #start-button {
+            position: absolute;
+            top: 40px;
+            right: 91px;
+            width: 45px;
+            height: 69px;
+        }
+
+        #console-started {
+            width: 320px;
+            height: 208px;
+        }
+    }
+
+    @media all and (max-width: 768px) {
+        margin: 0 auto;
+
+        .try-it {
+            right: 28px;
+            width: 70px;
+            height: 70px;
+            padding-top: 22px;
+            border-radius: 70px;
+            animation-name: tryfloatmobile;
+        }
+    }
+}
+
+@keyframes tryfloat {
+    0% {
+        top: 170px;
+    }
+
+    100% {
+        top: 190px;
+    }
+}
+
+@keyframes tryfloatmobile {
+    0% {
+        top: 100px;
+    }
+
+    100% {
+        top: 115px;
+    }
+}
+
+
+.treadmill-animation {
+    position: relative;
+    box-sizing: border-box;
+    height: 260px;
+    background: $white;
+    border: 20px solid $dark-gray;
+    border-radius: 10px;
+
+    .treadmill-not-tilting {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 220px;
+    }
+
+    .treadmill-tilting {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 220px;
+    }
+
+    @media all and (max-width: 940px) {
+        width: 320px;
+        height: 193px;
+        margin: 0 auto;
+
+        .treadmill-not-tilting {
+            height: 154px;
+        }
+
+        .treadmill-tilting {
+            height: 154px;
+        }
+    }
 }
 
 /// Gallery
@@ -524,7 +721,7 @@ ul {
 
 
     @media all and (max-width: 768px) {
-        padding: 30px 30px;
+        padding: 30px 0px;
 
         h3 {
             margin-bottom: 0;
