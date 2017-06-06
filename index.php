@@ -77,7 +77,7 @@
 
                     <div class="media-slider">
                         <div>
-                            <a href="images/photo-treadmill.jpg" data-lity data-lity-desc=""><img src="images/photo-treadmill.jpg" alt="Power Console Photo"></a>
+                            <a href="images/photo-treadmill.jpg" data-lity data-lity-desc=""><img src="images/photo-treadmill.jpg" alt="Treadmill Photo"></a>
                         </div>
                         <div>
                             <a href="//www.youtube.com/watch?v=ilDTWGPAWDE" data-lity><img src="images/video-placeholder.jpg"></a>
@@ -85,15 +85,7 @@
                         <div>
                             <a href="images/photo-power-console.jpg" data-lity data-lity-desc=""><img src="images/photo-power-console.jpg" alt="Power Console Photo"></a>
                         </div>
-                        <div>
-                            <a href="images/photo-power-console.jpg" data-lity data-lity-desc=""><img src="images/photo-power-console.jpg" alt="Power Console Photo"></a>
-                        </div>
-                        <div>
-                            <a href="images/photo-power-console.jpg" data-lity data-lity-desc=""><img src="images/photo-power-console.jpg" alt="Power Console Photo"></a>
-                        </div>
-                        <div>
-                            <a href="images/photo-power-console.jpg" data-lity data-lity-desc=""><img src="images/photo-power-console.jpg" alt="Power Console Photo"></a>
-                        </div>
+
                     </div>
 
                 </div>

@@ -1473,6 +1473,15 @@ ul {
   background: #ffffff;
   border: 20px solid #323232;
   border-radius: 10px; }
+  .treadmill-animation:before {
+    content: "*Animation is sped up for demonstration.";
+    position: absolute;
+    bottom: -17px;
+    right: -1px;
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    color: #ffffff;
+    z-index: 100; }
   .treadmill-animation .treadmill-not-tilting {
     display: block;
     position: absolute;

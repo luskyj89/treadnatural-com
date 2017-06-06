@@ -603,6 +603,17 @@ ul {
     border: 20px solid $dark-gray;
     border-radius: 10px;
 
+    &:before {
+        content: "*Animation is sped up for demonstration.";
+        position: absolute;
+        bottom: -17px;
+        right: -1px;
+        font-family: $font-roboto;
+        font-size: 10px;
+        color: $white;
+        z-index: 100;
+    }
+
     .treadmill-not-tilting {
         display: block;
         position: absolute;
