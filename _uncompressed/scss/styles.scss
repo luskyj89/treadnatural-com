@@ -28,7 +28,7 @@ $width: 1280px;
 /// Global Styles
 body {
     -webkit-font-smoothing: antialiased;
-    background: $white;
+    background: $blue;
     overflow-x: hidden;
     width: 100%;
     font-family: $font-roboto;
@@ -44,6 +44,7 @@ h1, h2 {
     margin: 0;
     font-family: $font-exo;
     font-weight: 900;
+    font-style: italic;
     color: $white;
     text-transform: uppercase;
 }
@@ -87,6 +88,7 @@ h3 {
     font-family: $font-exo;
     font-size: 48px;
     font-weight: 900;
+    font-style: italic;
     color: $white;
     text-transform: uppercase;
 
@@ -189,6 +191,7 @@ ul {
 
     ul {
         margin: 25px auto;
+        padding: 0;
         text-align: center;
     }
 
@@ -202,6 +205,7 @@ ul {
             font-family: $font-exo;
             font-weight: 900;
             font-size: 18px;
+            font-style: italic;
             color: $white;
             text-transform: uppercase;
             text-shadow: 1px 1px 3px rgba(23, 23, 23, 0.89);
@@ -361,6 +365,16 @@ ul {
             animation-timing-function: ease-out;
             animation-iteration-count: 1;
             animation-fill-mode: forwards;
+        }
+    }
+
+    @media all and (max-width: 480px) {
+        background: url(../images/photo-treadmill.jpg) no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .tn-video {
+            display: none;
         }
     }
 }
@@ -715,9 +729,9 @@ ul {
     display: block;
 }
 
-/// Testimonials
+/// Links
 
-#testimonials {
+#links {
     padding: 90px 20px 100px;
     background-color: $green;
 
@@ -727,7 +741,12 @@ ul {
     }
 
     .content {
-        width: 33.3333%;
+        width: 100%;
+    }
+
+    a {
+        color: $darkest-gray;
+        text-decoration: underline;
     }
 
 
@@ -764,13 +783,13 @@ ul {
         display: block;
         width: 100%;
         margin: 15px 0;
-        padding: 0 20px;
+        padding: 15px 20px;
         background-color: $darkest-gray;
         border: 0 solid;
         border-top: 3px solid $white;
         font-family: $font-roboto;
         font-size: 18px;
-        line-height: 53px;
+        line-height: 23px;
         color: $white;
         transition: all .7s ease-out;
 

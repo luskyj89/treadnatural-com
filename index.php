@@ -52,7 +52,8 @@
                     <article class="content left">
                         <h3>About The Device</h3>
                         <p><strong>What is TredNatural?</strong></p>
-                        <p>TredNatural Technology is a patent pending device created by John P. Stelmach, MD and Dee Stelmach, MD, which allows treadmills to shift left-to-right by two degrees while a person is exercising. The device can be integrated into treadmills or attached to an existing treadmill and powered on and off through a small console. The idea is to recreate the natural sensation one has when walking or running outside. This is to eliminate the repetitive use injuries or general discomfort that often occur when using a flat treadmill, the result of the same joints and muscles being used with each step. TredNatural will bring the world outside inside to you and your treadmill.</p>
+                        <p>TredNatural Technology is a patent pending device created by John P. Stelmach, MD and Dee Stelmach, DPM, which allows treadmills to shift left-to-right by three degrees while a person is exercising. The device can be integrated into treadmills or attached to an existing treadmill and powered on and off through a small console.</p>
+                        <p>The idea is to recreate the natural sensation one has when walking or running outside. This is to eliminate the repetitive use injuries or general discomfort that often occur when using a flat treadmill, the result of the same joints and muscles being used with each step. TredNatural will bring the outside world inside.</p>
                     </article>
 
                     <div class="content right">
@@ -77,10 +78,13 @@
 
                     <div class="media-slider">
                         <div>
-                            <a href="//www.youtube.com/watch?v=cd9PQCxklEM" data-lity><img src="images/video-placeholder.jpg"></a>
+                            <a href="//www.youtube.com/watch?v=cx1LzsvIugk" data-lity><img src="images/video3-thumb.jpg"></a>
                         </div>
                         <div>
-                            <a href="//www.youtube.com/watch?v=qftKn8N__9s" data-lity><img src="images/video-placeholder.jpg"></a>
+                            <a href="//www.youtube.com/watch?v=cd9PQCxklEM" data-lity><img src="images/video1-thumb.jpg"></a>
+                        </div>
+                        <div>
+                            <a href="//www.youtube.com/watch?v=PARcfRdmW34" data-lity><img src="images/video2-thumb.jpg"></a>
                         </div>
                         <div>
                             <a href="images/photo-treadmill.jpg" data-lity data-lity-desc=""><img src="images/photo-treadmill.jpg" alt="Treadmill Photo"></a>
@@ -124,27 +128,19 @@
                 </div>
             </section>
 
-            <section id="testimonials">
-                <h3>Testimonials</h3>
+            <section id="links">
+                <h3>Links</h3>
 
                 <div class="wrap flex-elements">
 
                     <article class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><a href="https://www.livestrong.com/article/309350-foot-pain-and-injuries-from-a-treadmill/" target="_blank">Foot and Pain and Injuries From a Treadmill</a> by Ryn Gargulinski Article appeared in LiveStrong.com</p>
 
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </article>
+                        <p><a href="http://livehealthy.chron.com/exercising-treadmill-damage-knees-6031.html" target="_blank">Does Exercising on a Treadmill Damage Your Knees?</a> by Joy Johnston</p>
 
-                    <article class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><a href="https://www.livestrong.com/article/544962-treadmills-hip-pain" target="_blank">Treadmills &amp; Hip Pain</a> by Rick Rockwell</p>
 
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    </article>
-
-                    <article class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-                        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p><a href="http://www.chicagotribune.com/suburbs/lake-county-news-sun/community/chi-ugc-article-the-treadmill-convenient-but-effective-2017-06-26-story.html" target="_blank">The treadmill: convenient, but effective?</a> Community Contributor Advocate Condell Medical Center</p>
                     </article>
 
                 </div>
